@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <p>Sorocaba</p>
+    <p>Copa do mundo</p>
+    <p>São Paulo FC</p>
+    <p>Fatec Sorocaba</p>
+    <p>Etec</p>
+
+    <hr/>
+
+    <script>
+        // este método retorna o(s) elemento(s) com o nome indicado
+        var tagsP = document.getElementsByTagName("p");
+         document.write(tagsP[4].innerHTML);
+        // exemplo 
+        tagsP[3].style.color="#f00";
+    </script>
+
+    <hr/>
+
+    <div class="Carro">Uno</div>
+    <div class="Carro">Palio</div>
+    <div class="Carro">Corsa</div>
+
+
+    <script>
+        console.log(
+
+            document.getElementsByClassName("Carro")
+        )
+    </script>
+
+    <div id="frutas"> laranja </div>
+    <script>
+        console.log(
+
+            document.getElementsByClassId("frutas")
+        )
+    </script>
+    
+</body>
+</html>
