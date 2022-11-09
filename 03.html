@@ -33,6 +33,7 @@
 
 
     <script>
+        //getElementsByClassName é um recurso do DOM API que retorna um array das classes especificadas
         console.log(
 
             document.getElementsByClassName("Carro")
@@ -41,11 +42,35 @@
 
     <div id="frutas"> laranja </div>
     <script>
+        //
         console.log(
 
             document.getElementsByClassId("frutas")
         )
     </script>
+
+<p class="ex">paragrafo.</p>
+<p class="ex">paragrafo.</p> 
+
+<script>
+document.querySelector(".ex").style.backgroundColor = "red";
+</script>
+
+<h1>documento</h1>
+<h2> Método querySelectorAll()</h2>
+<h2 class="exemplo">Titulo</h2>
+<p class="exemplo">Paragrafo</p> 
+
+<script>
+   //O querySelectorAll()método retorna todos os elementos que correspondem a um(s) seletor(es) CSS.
+    //O querySelectorAll()método retorna um NodeList .
+    //O querySelectorAll()método lança uma exceção SYNTAX_ERR se os seletores forem inválidos
+const nodeList = document.querySelectorAll(".exemplo");
+for (let i = 0; i < nodeList.length; i++) {
+  nodeList[i].style.backgroundColor = "red";
+}
+</script>
+
     
 </body>
 </html>
