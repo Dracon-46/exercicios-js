@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 </title>
+
+    <script>
+         function mOver(obj)
+        {
+            obj.innerHTML="exercicio"
+        }
+
+        function mOut(obj)
+        {
+            obj.innerHTML="Passe o mouse por cima"
+        }
+
+        function checkCookies()
+        {
+            if (navigator.cookieEnabled==true)
+            {
+                alert("Cookies são permitidos")
+            }
+            else
+            {
+                alert("Cookies não são permitidos")
+            }
+        }
+
+        function emFoco(x)
+        {
+            x.style.background = "blue";
+        }
+
+        function Mudar()
+        {
+            var x=document.getElementById("mudar");
+            x.value=x.value.toUpperCase();
+        }
+    </script>
+
+</head>
+
+    <style>
+        body
+        {
+            background-color: rgb(188, 215, 241);
+        }
+
+        input
+        {
+            margin-left: 15%;
+            font-size: 1.5em;
+        }
+
+        .trocar
+        {
+            margin-top: 3%;
+            margin-left: 7%;
+        }
+    </style>
+
+    <body onload="checkCookies()">
+        <div class="trocar" onmouseover="mOver(this)" onmouseout="mOut(this)">Passe o mouse por cima</div>
+
+        <hr/>
+
+        <input type="text" onfocus="emFoco(this)">
+
+        <hr/>
+
+        <p>Digite seu Nome:</p>
+
+        <input type="text" id="mudar" onchange="Mudar()">
+    </body>
+    </html>
